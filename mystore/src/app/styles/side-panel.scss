@@ -1,0 +1,104 @@
+@import './base/variables';
+
+
+
+button {
+  border-radius: 4px;
+  padding: 16px 64px;
+  color: $inverse;
+  &.primary-btn {
+    @extend .font-bold !optional;
+    background-color: $primary;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $inverse;
+    @include media-breakpoint-only(sm) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+    &.disabled {
+      border-width: 1px;
+      border-style: solid;
+      border-color: $disabled;
+      background-color: $disabled;
+      &:hover {
+        background-color: $disabled;
+        color: $inverse;
+      }
+    }
+    &:hover {
+      background-color: $primary-hover;
+      color: $inverse;
+    }
+  }
+  &.secondary-btn {
+    @extend .font-bold !optional;
+    background-color: $bg-default;
+    font-size: 14px;
+    line-height: 16px;
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    padding: 0;
+    text-transform: uppercase;
+    &.disabled {
+      border-width: 1px;
+      border-style: solid;
+      border-color: $disabled;
+      color: $disabled;
+      &:hover {
+        background-color: $bg-default;
+        color: $disabled;
+      }
+    }
+    &:hover {
+      background-color: $primary-hover;
+      color: $inverse;
+    }
+  }
+  &.tertiary-btn {
+    @extend .font-regular !optional;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 20px;
+    color: $primary;
+    border: 0;
+    padding: 0;
+    &:hover {
+      text-decoration: underline;
+      color: $primary;
+    }
+    &.link-inline {
+      line-height: 0;
+      height: auto;
+    }
+  }
+}
+
+
+cx-generic-link {
+  &.primary-btn {
+    a {
+        @extend .font-bold !optional;
+      background-color: $primary;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 16px 64px;
+      color: $inverse;
+      @include media-breakpoint-only(sm) {
+        font-size: 12px;
+        line-height: 14px;
+      }
+      &:hover {
+        background-color: $primary-hover;
+        color: $inverse;
+        text-decoration: none;
+      }
+    }
+  }
+}
